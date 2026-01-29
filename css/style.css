@@ -1,0 +1,93 @@
+/* 1. RESET: El primer paso de todo desarrollador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #96C3EC;
+    font-family: sans-serif; /* Una fuente base para todo */
+}
+
+/* 2. HEADER con FLEXBOX */
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;       /* ¡Magia de Flexbox! */
+    justify-content: center; 
+    gap: 30px;           /* Espacio exacto entre elementos */
+    margin-top: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;    /* Para que se vea profesional al pasar el mouse */
+}
+
+header nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* 3. SECCIÓN DE SERVICIOS con CSS GRID */
+/* Aquí es donde resolvemos tu duda del fondo diferente */
+.services-container {
+    background-color: #f0f7ff; /* Fondo distinto para esta sección */
+    padding: 50px 20px;
+    margin: 40px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas automáticas */
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombrita para que resalte */
+}
+
+.service-card img {
+    width: 100%;
+    max-width: 200px; /* Controlamos el tamaño de tus miniaturas */
+    border-radius: 5px;
+}
+
+/* 4. TUS ESTILOS ORIGINALES (Mantenidos y limpios) */
+#DM {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #cfd5d8; 
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #034903;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
