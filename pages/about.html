@@ -3,50 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - DigitalMensa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Nosotros - DigitalMensa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+</head>
 
-<header class="header-flex">
-        <img src="../img/logo-azul.jpg.png" alt="Logo" class="logo" style="max-width: 150px;">
-        <h1 id="DM">DIGITALMENSA</h1>
-        <h2>Sobre Nosotros</h2>
+<body>
+
+    <header class="header-flex">
+        <img src="../img/logo-azul.jpg.png" alt="Logo corporativo de DigitalMensa" class="logo" style="max-width: 150px;">
+        <h1 id="DM">Digital<span>Mensa</span></h1>
         <nav>
             <ul class="nav-links">
-                <li><a href="services.html">SERVICES</a></li>
                 <li><a href="../index.html">HOME</a></li>
+                <li><a href="services.html">SERVICES</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="container mt-5">
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6 text-center">
-                    <img src="../img/logo-azul.jpg.png" class="img-fluid rounded shadow" alt="Sobre nosotros">
+        <section class="container my-5">
+            <div class="row align-items-center gx-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../img/logo-azul.jpg.png" class="img-fluid rounded-4 shadow-lg" alt="Equipo de DigitalMensa trabajando en soluciones digitales">
                 </div>
-                <div class="col-md-6">
-                    <h2 class="historia">Nuestra Historia</h2>
-                    <p>DigitalMensa nació para conectar el talento técnico con las necesidades reales de las empresas modernas.</p>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4 historia">Nuestra Historia</h2>
+                    <p class="lead">
+                        "Somos un hub de profesionales unidos por la pasión de entregar los mejores resultados a nuestros clientes".
+                    </p>
+                    <p class="text-muted">
+                        Fundada en la intersección de la creatividad y la tecnología, DigitalMensa nació con la misión de democratizar el acceso a soluciones digitales de alto nivel. No solo creamos software; construimos puentes entre tus ideas y el éxito comercial de tu empresa.
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <div class="row mt-5 justify-content-center">
-                <div class="col-md-8 bg-white p-4 rounded shadow-sm border">
-                    <h3 class="text-center mb-4">Contáctanos</h3>
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Nombre</label>
-                            <input type="text" class="form-control" placeholder="Tu nombre">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="nombre@ejemplo.com">
-                        </div>
-                        <button type="submit" class="btn btn-success w-100">Enviar Mensaje</button>
-                    </form>
+        <section class="container-fluid bg-light py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-7 bg-white p-5 rounded-4 shadow-sm">
+                        <h3 class="text-center fw-bold mb-4">¿Hablamos de tu próximo proyecto?</h3>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Nombre Completo</label>
+                                <input type="text" class="form-control border-0 bg-light py-2" placeholder="Ej: Juan Pérez" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Correo Electrónico</label>
+                                <input type="email" class="form-control border-0 bg-light py-2" placeholder="nombre@empresa.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Mensaje</label>
+                                <textarea class="form-control border-0 bg-light" rows="4" placeholder="Cuéntanos brevemente tu necesidad..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-3 fw-bold text-uppercase shadow">Enviar Propuesta</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0 small">Copyright 2026 &copy; Digital Mensa - Estrategia y Tecnología</p>
+    </footer>
+
+</body>
+</html>
