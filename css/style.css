@@ -91,3 +91,38 @@ footer {
     text-decoration: none;
     border-radius: 5px;
 }
+
+/* Aplicar fuentes */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+#DM {
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50; /* Un tono más oscuro y elegante */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Mejora de las Cards (Box Model + Sombras) */
+.card {
+    border: none; /* Quitamos el borde aburrido */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px; /* Bordes más suaves */
+}
+
+/* Efecto al pasar el mouse */
+.card:hover {
+    transform: translateY(-10px); /* La tarjeta sube 10px */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Estilizar el botón de contacto */
+.btn-success {
+    background-color: #27ae60;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
