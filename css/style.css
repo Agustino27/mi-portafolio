@@ -118,6 +118,8 @@ body {
     color: var(--color-intelecto);
 }
 
+.historia { font-family: var(--fuente-titulo); }
+
 /* Formulario */
 .btn-primary {
     background-color: var(--color-intelecto);
