@@ -1,0 +1,24 @@
+{
+  "name": "mi-portafolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "compile-sass": "sass --watch scss/style.scss css/style.css"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agustino27/mi-portafolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Agustino27/mi-portafolio/issues"
+  },
+  "homepage": "https://github.com/Agustino27/mi-portafolio#readme",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}
