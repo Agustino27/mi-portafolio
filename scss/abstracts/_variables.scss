@@ -1,4 +1,4 @@
-// Colores principales de DigitalMensa
+// Colores de marca
 $color-primario: #031f3a;
 $color-acento: #00e5ff;
 $color-fondo: #f8f9fa;
@@ -7,3 +7,18 @@ $color-texto: #333333;
 // Tipografías
 $font-main: 'Montserrat', sans-serif;
 $font-titles: 'Playfair Display', serif;
+
+// Colores para redes sociales
+$redes: (
+  facebook: #3b5998,
+  instagram: #e1306c,
+  linkedin: #0077b1
+);
+
+@each $red, $color in $redes {
+  .btn-#{$red} {
+    background-color: $color;
+    color: white;
+    &:hover { background-color: darken($color, 10%); }
+  }
+}

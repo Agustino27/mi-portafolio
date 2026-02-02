@@ -11,17 +11,24 @@
 
 <body>
 
-    <header class="header-flex">
-    <div class="brand">
-        <h1 id="DM">Digital<span>Mensa</span></h1>
+    <header class="navbar navbar-expand-lg header-flex">
+    <div class="container-fluid">
+        <a class="navbar-brand brand" href="../index.html">
+            <h1 id="DM">Digital<span>Mensa</span></h1>
+        </a>
+
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav nav-links">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li> 
+                <li class="nav-item"><a class="nav-link btn-header ms-lg-3" href="about.html">Contacto</a></li>
+            </ul>
+        </div>
     </div>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li> 
-            <li><a href="services.html">Servicios</a></li>
-            <li><a href="about.html" class="btn-custom">Contacto</a></li>
-        </ul>
-    </nav>
     </header>
 
     <main>
@@ -33,7 +40,7 @@
             <div class="row g-4">
                 <article class="col-md-4">
                     <div class="card h-100 shadow-sm border-0">
-                        <img src="../img/WEB DEV & HOST.png" class="card-img-top" alt="Servicios de Web Development y Hosting de alta velocidad">
+                        <img src="../img/web-dev-host.png" class="card-img-top" alt="Servicios de Web Development y Hosting">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Web Development & Hosting</h5>
                             <p class="card-text text-muted">Sitios optimizados para SEO con infraestructura escalable y soporte técnico 24/7.</p>
@@ -43,7 +50,7 @@
 
                 <article class="col-md-4">
                     <div class="card h-100 shadow-sm border-0">
-                        <img src="../img/CRM & ECOMM.png" class="card-img-top" alt="Gestión de clientes y plataformas de venta online">
+                        <img src="../img/crm-ecom.png" class="card-img-top" alt="Customer Relationship Management y soluciones de E-commerce">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">CRM & E-commerce</h5>
                             <p class="card-text text-muted">Gestión de datos de clientes y optimización de embudos de venta digital.</p>
@@ -53,7 +60,7 @@
 
                 <article class="col-md-4">
                     <div class="card h-100 shadow-sm border-0">
-                        <img src="../img/AI VERO.png" class="card-img-top" alt="Modelos de Inteligencia Artificial aplicados a procesos de negocio">
+                        <img src="../img/ai.png" class="card-img-top" alt="Inteligencia Artificial aplicada a negocios">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Integraciones de AI</h5>
                             <p class="card-text text-muted">Implementación de automatización inteligente y modelos de lenguaje personalizados.</p>

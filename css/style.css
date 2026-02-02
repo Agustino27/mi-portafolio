@@ -1,3 +1,27 @@
+.btn-facebook {
+  background-color: #3b5998;
+  color: white;
+}
+.btn-facebook:hover {
+  background-color: rgb(44.7393364929, 67.4881516588, 115.2606635071);
+}
+
+.btn-instagram {
+  background-color: #e1306c;
+  color: white;
+}
+.btn-instagram:hover {
+  background-color: rgb(193.8987341772, 28.1012658228, 84.3037974684);
+}
+
+.btn-linkedin {
+  background-color: #0077b1;
+  color: white;
+}
+.btn-linkedin:hover {
+  background-color: rgb(0, 84.7118644068, 126);
+}
+
 .header-flex {
   background-color: #031f3a;
   display: flex;
@@ -32,19 +56,98 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2, .historia, h3, #DM {
   font-family: "Playfair Display", serif;
   color: #031f3a;
 }
 
-h2 {
+h2, .historia {
   font-size: 3.5rem;
 }
 @media (max-width: 768px) {
-  h2 {
-    font-size: 2rem;
-    color: #00e5ff;
+  h2, .historia {
+    font-size: 2.2rem;
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+#DM {
+  font-family: "Playfair Display", serif;
+  color: white;
+  margin-bottom: 0;
+}
+#DM span {
+  color: #00e5ff;
+  font-weight: 900;
+}
+#DM:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.btn-custom, .btn-outline, .btn-header {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-custom, .btn-outline {
+  padding: 12px 30px;
+  background-color: #00e5ff;
+  color: #031f3a;
+  border-radius: 50px;
+}
+.btn-custom:hover, .btn-outline:hover {
+  background-color: rgb(51, 234.2, 255);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #031f3a;
+  color: #031f3a;
+}
+.btn-outline:hover {
+  background-color: #031f3a;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.header-flex {
+  background-color: #031f3a !important;
+  padding: 0.5rem 2rem;
+}
+.header-flex .nav-link {
+  color: white !important;
+}
+.header-flex .nav-link:hover {
+  color: #00e5ff !important;
+}
+.header-flex .custom-toggler {
+  border-color: #00e5ff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.header-flex .custom-toggler .navbar-toggler-icon {
+  filter: invert(1) brightness(2);
+}
+
+.historia {
+  font-size: 2.5rem;
+}
+.historia::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #00e5ff;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  main img {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+

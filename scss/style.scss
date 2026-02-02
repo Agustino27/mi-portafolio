@@ -2,23 +2,115 @@
 @import 'abstracts/mixins';
 @import 'layout/header';
 
-// Estilos básicos del sitio
+// Estilos Globales
 body {
     background-color: $color-fondo;
     color: $color-texto;
     font-family: $font-main;
 }
 
-h1, h2, h3 {
+h1, h2, h3, #DM {
     font-family: $font-titles;
     color: $color-primario;
 }
 
+// Estilos con mixin para h2 
 h2 {
-    font-size: 3.5rem; 
-
-    @include mobile {
-        font-size: 2rem; 
-        color: $color-acento; 
+    font-size: 3.5rem;
+    @include mobile { font-size: 2.2rem; }
 }
+
+// Span de Logo
+#DM {
+    font-family: $font-titles;
+    color: white; 
+    margin-bottom: 0;
+    
+    span {
+        color: $color-acento;
+        font-weight: 900;
+    }
+
+    &:hover {
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+}
+
+// Botones Personalizados
+.btn-custom, .btn-header {
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-custom {
+    padding: 12px 30px;
+    background-color: $color-acento;
+    color: $color-primario;
+    border-radius: 50px;
+
+    &:hover {
+        background-color: lighten($color-acento, 10%);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+}
+
+// Botón transparente con borde
+.btn-outline {
+    @extend .btn-custom;
+    background-color: transparent;
+    border: 2px solid $color-primario;
+    color: $color-primario;
+
+    &:hover {
+        background-color: $color-primario;
+        color: white;
+        transform: translateY(-5px);
+    }
+}
+
+// Header personalizado
+.header-flex {
+    background-color: $color-primario !important;
+    padding: 0.5rem 2rem;
+
+    .nav-link {
+        color: white !important;
+        &:hover { color: $color-acento !important; }
+    }
+
+    // Toggler simplificado
+    .custom-toggler {
+        border-color: $color-acento;
+        background-color: rgba(255, 255, 255, 0.1);
+        
+        .navbar-toggler-icon {
+            filter: invert(1) brightness(2); 
+        }
+    }
+}
+
+// Otras secciones
+.historia {
+    @extend h2; 
+    font-size: 2.5rem;
+    
+    &::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 4px;
+        background-color: $color-acento;
+        margin-top: 10px;
+    }
+}
+
+main img {
+    @include mobile {
+        max-width: 70%; //Proporcion de logo en Mobile
+        margin: 0 auto;
+    }
 }
