@@ -1,65 +1,28 @@
-// VARIABLES (Colores & Fuentes)
 
+// VARIABLES
 $blue-dark: #031f3a;
 $blue-light: #7eb1f7;
 $white: #ffffff;
 $font-brand: 'Playfair Display', serif;
 $font-main: 'Montserrat', sans-serif;
 
+// Breakpoints
+$tablet: 768px;
+$desktop: 992px;
 
-// ESTILOS GENERALES
+
+// 2. ESTILOS BASE Mobile First
 
 body {
     font-family: $font-main;
+    overflow-x: hidden; 
 }
 
-// Header & Navegacion
-
-.header-flex {
-    background-color: $blue-dark;
-    padding: 5px 0;
-    min-height: 65px;
-    display: flex;
-    align-items: center;
-
-    
-        display: flex;
-        align-items: center;
-
-        .nav-link {
-            color: $white;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-
-            &:hover {
-                color: $blue-light;
-            }
-        }
-    }
-
-.btn-header {
-        background-color: $blue-light;
-        color: $blue-dark;
-        font-weight: bold;
-        padding: 8px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        
-        &:hover {
-            background-color: $white;
-            color: $blue-dark;
-        }
-    }
-
-
-
-// BRANDING (DigitalMensa)
-
+// Branding 
 #DM {
     .brand-text {
         font-family: $font-brand;
-        font-size: 1.7rem;
+        font-size: 1.3rem; 
         margin: 0;
         color: $white;
         display: flex;
@@ -73,32 +36,110 @@ body {
     }
 }
 
+// Header & Navegación
+.header-flex {
+    background-color: $blue-dark;
+    padding: 10px 0;
+    min-height: 65px;
 
-// Componentes de Main & Footer
 
+    .navbar-collapse {
+        text-align: center; 
+        padding: 1.5rem 0;
+    }
+
+    .navbar-nav {
+        .nav-link {
+            color: $white;
+            margin: 10px 0;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $blue-light;
+            }
+        }
+    }
+}
+
+.btn-header {
+    background-color: $blue-light;
+    color: $blue-dark;
+    font-weight: bold;
+    padding: 10px 25px; 
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    
+    &:hover {
+        background-color: $white;
+        color: $blue-dark;
+    }
+}
+
+// Cards Portafolio (Simplificadas para móvil)
+.project-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin-bottom: 1.5rem;
+
+    .card-title {
+        transition: color 0.3s ease;
+    }
+
+    img {
+        transition: opacity 0.3s ease;
+    }
+}
+
+// Botones Generales
 .btn-custom {
     background-color: $blue-light;
     color: $blue-dark;
     border: none;
-    
+    padding: 12px 20px;
 }
 
-// Estilos Cards Portafolio
-.project-card {
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    
-    &:hover {
+
+// MEDIA QUERIES
+
+
+@media (min-width: $desktop) {
+    #DM {
+        .brand-text {
+            font-size: 1.7rem; 
+        }
+    }
+
+    .header-flex {
+        padding: 5px 0;
+
+        .navbar-collapse {
+            padding: 0;
+        }
+
+        .navbar-nav {
+            .nav-link {
+                margin: 0 15px;
+            }
+        }
+    }
+
+    .btn-header {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+
+    // Efectos Hover solo en Desktop
+    .project-card:hover {
         transform: scale(1.02); 
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         
         .card-title {
             color: $blue-light;
         }
-    }
 
-    img {
-        transition: opacity 0.3s ease;
-        &:hover {
+        img {
             opacity: 0.9;
         }
     }
