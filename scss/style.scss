@@ -110,7 +110,37 @@ h2 {
 
 main img {
     @include mobile {
-        max-width: 70%; //Proporcion de logo en Mobile
+        max-width: 70%; 
         margin: 0 auto;
+    }
+}
+
+// Estilos para los botones del Footer
+.btn-footer-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+
+    &:hover {
+        transform: translateY(-3px); 
+        color: white;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    &.whatsapp {
+        background-color: #25d366;
+        &:hover { background-color: #128c7e; }
+    }
+
+    &.linkedin {
+        background-color: #0077b5;
+        &:hover { background-color: #005582; }
     }
 }
