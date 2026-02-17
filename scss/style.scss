@@ -1,6 +1,7 @@
 // ==========================================
 // 1. VARIABLES
 // ==========================================
+
 $blue-dark: #031f3a;
 $blue-light: #7eb1f7;
 $white: #ffffff;
@@ -12,18 +13,19 @@ $tablet: 768px;
 $desktop: 992px;
 
 // ==========================================
-// 2. ESTILOS BASE (Móvil por defecto)
+// 2. ESTILOS BASE (Mobile First)
 // ==========================================
+
 body {
     font-family: $font-main;
-    overflow-x: hidden; // Evita scroll lateral accidental
+    overflow-x: hidden; 
 }
 
 // Branding 
 #DM {
     .brand-text {
         font-family: $font-brand;
-        font-size: 1.3rem; // Más pequeño en móvil
+        font-size: 1.3rem; 
         margin: 0;
         color: $white;
         display: flex;
@@ -43,16 +45,16 @@ body {
     padding: 10px 0;
     min-height: 65px;
 
-    // Menú colapsable de Bootstrap
+  
     .navbar-collapse {
-        text-align: center; // Centra links en móvil
+        text-align: center; 
         padding: 1.5rem 0;
     }
 
     .navbar-nav {
         .nav-link {
             color: $white;
-            margin: 10px 0; // Espaciado vertical para dedos
+            margin: 10px 0; 
             transition: color 0.3s ease;
 
             &:hover {
@@ -66,7 +68,7 @@ body {
     background-color: $blue-light;
     color: $blue-dark;
     font-weight: bold;
-    padding: 10px 25px; // Más grande en móvil para facilitar toque
+    padding: 10px 25px; 
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
@@ -79,7 +81,7 @@ body {
     }
 }
 
-// Cards Portafolio (Simplificadas para móvil)
+// Cards Portafolio
 .project-card {
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     margin-bottom: 1.5rem;
@@ -89,6 +91,9 @@ body {
     }
 
     img {
+        width: 100%;
+        height: 220px;     
+        object-fit: cover;
         transition: opacity 0.3s ease;
     }
 }
@@ -102,13 +107,13 @@ body {
 }
 
 // ==========================================
-// 3. MEDIA QUERIES (Creciendo hacia Desktop)
+// 3. MEDIA QUERIES
 // ==========================================
 
 @media (min-width: $desktop) {
     #DM {
         .brand-text {
-            font-size: 1.7rem; // Tamaño original para desktop
+            font-size: 1.7rem; 
         }
     }
 
@@ -121,7 +126,7 @@ body {
 
         .navbar-nav {
             .nav-link {
-                margin: 0 15px; // Espaciado horizontal
+                margin: 0 15px;
             }
         }
     }
@@ -131,7 +136,7 @@ body {
         margin-left: 10px;
     }
 
-    // Efectos Hover solo en Desktop (evita bugs en táctil)
+    // Efectos Hover solo en Desktop
     .project-card:hover {
         transform: scale(1.02); 
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
