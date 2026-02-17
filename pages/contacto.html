@@ -61,7 +61,7 @@
                     </div>
                     <div class="d-flex align-items-center mb-3">
                         <i class="fa-solid fa-location-dot text-primary me-3"></i>
-                        <span>Buenos Aires, Argentina (Remote Hub)</span>
+                        <span>Buenos Aires, ARG (Remote Hub)</span>
                     </div>
                     <hr>
                     <p class="small text-muted">Síguenos en nuestras redes para ver nuestras últimas actualizaciones y tips tecnológicos.</p>
@@ -69,32 +69,43 @@
             </div>
 
             <div class="col-md-7" data-aos="fade-left">
-                <form id="contactForm" class="p-4 shadow-sm rounded-4 border">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label fw-bold small">Nombre</label>
-                            <input type="text" class="form-control" placeholder="Tu nombre" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label fw-bold small">Email</label>
-                            <input type="email" class="form-control" placeholder="correo@ejemplo.com" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label fw-bold small">Asunto</label>
-                        <select class="form-select">
-                            <option selected>Consulta General</option>
-                            <option value="1">Desarrollo Web</option>
-                            <option value="2">CRM / E-commerce</option>
-                            <option value="3">Inteligencia Artificial</option>
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label class="form-label fw-bold small">Mensaje</label>
-                        <textarea class="form-control" rows="5" placeholder="Cuéntanos más sobre tu proyecto..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-custom w-100 py-3 fw-bold text-uppercase">Enviar Mensaje</button>
-                </form>
+            
+            <form id="contactForm" class="p-4 shadow-sm rounded-4 border needs-validation" novalidate>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="name" class="form-label fw-bold small">Nombre</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Tu nombre" 
+                        required autocomplete="name">
+                    <div class="invalid-feedback">Por favor, dinos tu nombre.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label fw-bold small">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="correo@ejemplo.com" 
+                        required autocomplete="email">
+                    <div class="invalid-feedback">Ingresa un correo válido.</div>
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="subject" class="form-label fw-bold small">Asunto</label>
+                <select id="subject" name="subject" class="form-select">
+                    <option value="" selected disabled>Selecciona una opción...</option>
+                    <option value="consulta">Consulta General</option>
+                    <option value="web">Desarrollo Web</option>
+                    <option value="crm">CRM / E-commerce</option>
+                    <option value="ai">Inteligencia Artificial</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="message" class="form-label fw-bold small">Mensaje</label>
+                <textarea id="message" name="message" class="form-control" rows="5" 
+                        placeholder="Cuéntanos más sobre tu proyecto..." required></textarea>
+                <div class="invalid-feedback">No olvides escribir tu mensaje.</div>
+            </div>
+
+            <button type="submit" class="btn-custom w-100 py-3 fw-bold text-uppercase">Enviar Mensaje</button>
+            </form>
             </div>
         </div>
     </main>
